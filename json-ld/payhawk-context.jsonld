@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "payhawk": "https://payhawk.com/vocab#",
+    "aid": "payhawk:aid",
+    "baseURL": "payhawk:baseURL",
+    "humanURL": "payhawk:humanURL",
+    "spendManagement": "payhawk:spendManagement",
+    "corporateCards": "payhawk:corporateCards",
+    "expenseManagement": "payhawk:expenseManagement",
+    "invoiceManagement": "payhawk:invoiceManagement",
+    "budgetControls": "payhawk:budgetControls",
+    "erpIntegration": "payhawk:erpIntegration",
+    "webhooks": "payhawk:webhooks",
+    "fundAccounts": "payhawk:fundAccounts",
+    "bankStatements": "payhawk:bankStatements"
+  },
+  "@type": "WebAPI",
+  "name": "Payhawk API",
+  "description": "RESTful API for programmatic access to Payhawk spend management features including expenses, corporate cards, transactions, employees, custom fields, fund accounts, bank statements, and webhook subscriptions.",
+  "url": "https://developers.payhawk.com/",
+  "provider": {
+    "@type": "Organization",
+    "name": "Payhawk",
+    "url": "https://payhawk.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/payhawk",
+      "https://x.com/payhawk",
+      "https://github.com/payhawk"
+    ]
+  },
+  "documentation": "https://developers.payhawk.com/",
+  "termsOfService": "https://payhawk.com/help/overview-of-the-payhawk-developer-api",
+  "baseURL": "https://api.payhawk.io/api/v3",
+  "keywords": [
+    "spend management",
+    "corporate cards",
+    "expense management",
+    "invoice management",
+    "budget controls",
+    "ERP integration",
+    "accounts payable",
+    "fintech",
+    "finance automation",
+    "webhooks"
+  ]
+}
