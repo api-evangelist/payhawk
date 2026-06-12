@@ -1,0 +1,121 @@
+specificationVersion: '0.1'
+id: payhawk-plans-pricing
+name: Payhawk Plans and Pricing
+description: >
+  Payhawk offers three commercial tiers for its spend management platform. All plans
+  require a custom quote; no publicly listed per-seat prices are available. The
+  Developer API is free to use for all Payhawk account holders regardless of plan.
+provider: Payhawk
+providerId: payhawk
+created: 2026-06-12
+modified: 2026-06-12
+reconciled: true
+plans:
+  - name: Premium Cards
+    id: premium-cards
+    description: >
+      Entry-level plan focused on corporate card issuance for UK and US businesses.
+      Includes physical and virtual commercial credit cards, digital wallet support
+      (Apple Pay, Google Pay), free online and offline payments, bulk card issuing,
+      and expedited global card shipping.
+    type: paid
+    pricing:
+      model: custom
+      billingCycle: monthly
+      currency: USD
+      price: custom
+    quotas:
+      - metric: corporate_cards
+        scope: account
+        type: quota
+        limit: unlimited
+        notes: Physical and virtual cards; bulk issuing supported
+      - metric: api_access
+        scope: account
+        type: boolean
+        value: true
+        notes: Developer API included at no extra charge for all account holders
+    features:
+      - Physical and virtual commercial credit cards (UK and US)
+      - Digital wallet integration (Google Wallet, Apple Pay)
+      - Free online and offline payments
+      - Bulk card issuing
+      - Expedited global card shipping
+
+  - name: All-in-one Spend
+    id: all-in-one-spend
+    description: >
+      Mid-tier plan that adds full expense management, reimbursements, and approval
+      workflows on top of card capabilities. Designed for teams that need to manage
+      out-of-pocket expenses alongside card spend.
+    type: paid
+    pricing:
+      model: custom
+      billingCycle: monthly
+      currency: USD
+      price: custom
+    quotas:
+      - metric: expense_reports
+        scope: account
+        type: quota
+        limit: unlimited
+      - metric: approval_workflows
+        scope: account
+        type: quota
+        limit: unlimited
+      - metric: api_access
+        scope: account
+        type: boolean
+        value: true
+        notes: Developer API included for all account holders
+    features:
+      - Everything in Premium Cards
+      - Custom multi-step approval workflows per spend type
+      - Non-card expense management
+      - Out-of-pocket reimbursements
+      - Mileage tracking
+      - Per diem management
+
+  - name: Enterprise
+    id: enterprise
+    description: >
+      Full-featured enterprise tier adding purchase order management, 3-way matching,
+      and native ERP connectors for Oracle NetSuite, Microsoft Dynamics 365 Business
+      Central, and Dynamics 365 Finance.
+    type: enterprise
+    pricing:
+      model: custom
+      billingCycle: monthly
+      currency: USD
+      price: custom
+    quotas:
+      - metric: purchase_orders
+        scope: account
+        type: quota
+        limit: unlimited
+      - metric: erp_integrations
+        scope: account
+        type: quota
+        limit: unlimited
+      - metric: api_access
+        scope: account
+        type: boolean
+        value: true
+        notes: Developer API included; partner consultant support available
+    features:
+      - Everything in All-in-one Spend
+      - Purchase order generation
+      - 3-way matching (GRN support)
+      - Automated discrepancy detection and threshold configuration
+      - Purchase order approval workflows
+      - Native ERP integrations (Oracle NetSuite, Microsoft Dynamics 365 BC, D365 Finance)
+      - Pre-, during-, and post-implementation integration partner support
+
+apiAccess:
+  included: true
+  notes: >
+    The Payhawk Developer API is free for all account holders at any plan tier.
+    API keys are created in the Payhawk Portal under Settings > Integrations.
+    No additional API subscription or developer tier is required.
+  rateLimit: 15 requests per second
+  baseURL: https://api.payhawk.io/api/v3

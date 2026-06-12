@@ -1,0 +1,60 @@
+specificationVersion: '0.1'
+id: payhawk-rate-limits
+name: Payhawk API Rate Limits
+description: >
+  Payhawk's Developer API enforces a global rate limit of 15 requests per second
+  across all endpoints. Rate limit state is communicated via standard response headers
+  on every API call. Exceeding the limit results in a 429 Too Many Requests response.
+provider: Payhawk
+providerId: payhawk
+created: 2026-06-12
+modified: 2026-06-12
+retryAfter:
+  header: Retry-After
+  description: >
+    When a 429 response is returned, clients should read the Retry-After header
+    to determine how long to wait before retrying the request.
+throttled:
+  httpStatusCode: 429
+  message: Too Many Requests
+  description: >
+    Returned when the caller exceeds 15 requests per second. Clients must back
+    off and retry after the period indicated by the Retry-After header.
+headers:
+  - name: X-RateLimit-Limit
+    description: The maximum number of requests allowed per time window
+  - name: X-RateLimit-Remaining
+    description: The number of requests remaining in the current time window
+  - name: X-RateLimit-Reset
+    description: Unix timestamp at which the current rate limit window resets
+limits:
+  - id: global-requests-per-second
+    scope: account
+    metric: requests
+    limit: 15
+    timeFrame: second
+    description: >
+      All API requests count against this single global limit of 15 requests per
+      second per account. This limit applies uniformly across all endpoints
+      regardless of the HTTP method used.
+    notes: >
+      Payhawk states this limit is "suitable for all use cases." Pagination
+      uses skip and take query parameters with a default page size of 1,000 items.
+pagination:
+  defaultLimit: 1000
+  parameters:
+    - name: skip
+      type: integer
+      description: Number of records to skip (offset-based pagination)
+    - name: take
+      type: integer
+      description: Number of records to return per page (max 1000 by default)
+authentication:
+  type: API Key
+  headers:
+    - Authorization: 'Bearer [API_KEY]'
+    - X-Payhawk-ApiKey: '[API_KEY]'
+  notes: >
+    API keys are managed under Settings > Integrations in the Payhawk Portal.
+    Both primary and secondary keys are auto-generated; custom keys can also
+    be created for finer access control.

@@ -1,0 +1,120 @@
+specificationVersion: '1.0'
+id: payhawk-finops
+name: Payhawk FinOps Profile
+description: >
+  FinOps Framework 1.0 / FOCUS-aligned profile for Payhawk spend management platform.
+  Payhawk's billing model is subscription-based with custom enterprise pricing; the
+  Developer API is bundled at no extra cost for all account holders.
+provider: Payhawk
+providerId: payhawk
+created: 2026-06-12
+modified: 2026-06-12
+
+billingModel:
+  type: subscription
+  cadence: monthly
+  pricingModel: custom
+  freeAPIAccess: true
+  notes: >
+    All three plan tiers (Premium Cards, All-in-one Spend, Enterprise) require
+    a custom sales quote. The Developer API is free for all account holders
+    and is not separately metered or billed.
+
+focusColumns:
+  - column: BilledCost
+    notes: Monthly subscription fee negotiated per account; not publicly listed
+  - column: ServiceName
+    value: Payhawk Spend Management Platform
+  - column: ServiceCategory
+    value: Business Applications
+  - column: ResourceType
+    values:
+      - CorporateCard
+      - Expense
+      - Invoice
+      - PurchaseOrder
+      - BankAccount
+  - column: Region
+    notes: >
+      Multi-region SaaS; customer data may reside in EU or US depending on
+      account configuration. Status monitored at status.payhawk.com.
+  - column: SkuId
+    values:
+      - premium-cards
+      - all-in-one-spend
+      - enterprise
+
+meters:
+  - id: corporate-cards-issued
+    name: Corporate Cards Issued
+    description: Number of physical and virtual corporate cards active on the account
+    unit: cards
+    scope: account
+    billingImpact: included-in-subscription
+  - id: active-users
+    name: Active Users / Employees
+    description: Number of employees with access to the Payhawk platform
+    unit: users
+    scope: account
+    billingImpact: included-in-subscription
+    notes: Per-seat pricing may apply; confirm with Payhawk sales
+  - id: api-requests
+    name: API Requests
+    description: Total API calls made against https://api.payhawk.io/api/v3
+    unit: requests-per-second
+    scope: account
+    billingImpact: no-charge
+    rateLimit: 15 requests per second
+  - id: erp-integrations
+    name: ERP / Accounting Integrations
+    description: Active native ERP connectors (NetSuite, Dynamics 365, Xero, QuickBooks)
+    unit: integrations
+    scope: account
+    billingImpact: enterprise-tier-required
+  - id: expense-transactions
+    name: Expense Transactions
+    description: Number of expense records created via cards, reimbursements, or invoices
+    unit: transactions
+    scope: account
+    billingImpact: included-in-subscription
+
+principles:
+  Visibility:
+    description: >
+      Payhawk provides real-time spend visibility through its web portal, mobile app,
+      and Developer API. Finance teams can retrieve expenses, transactions, and bank
+      statements programmatically to integrate spend data into BI tools or internal
+      dashboards.
+    tools:
+      - name: Payhawk Developer API
+        url: https://developers.payhawk.com/
+        notes: Pull expenses, transactions, fund account statements, and custom fields
+      - name: Payhawk Status Page
+        url: https://status.payhawk.com
+        notes: 99.9% uptime SLA; subscribe for incident notifications via email or Slack
+      - name: Webhook Subscriptions
+        url: https://developers.payhawk.com/#/Webhook%20Subscriptions
+        notes: >
+          Real-time event notifications for expense lifecycle, payments, deposits,
+          suppliers, and purchase orders; signatures verified via SHA-256 / RSA
+
+  Optimization:
+    description: >
+      Payhawk enables spend optimization through budget controls, multi-step approval
+      workflows, policy enforcement on corporate cards, and 3-way PO matching (Enterprise).
+      API access allows teams to export spend data for cost allocation and chargebacks.
+    capabilities:
+      - name: Budget Controls
+        description: Set card limits, category restrictions, and merchant controls per card
+      - name: Approval Workflows
+        description: Custom multi-step workflows per spend type to enforce policy before payment
+      - name: 3-Way PO Matching
+        description: Automated PO / invoice / GRN reconciliation to eliminate duplicate payments (Enterprise)
+      - name: ERP Integration
+        description: >
+          Native connectors to NetSuite, Dynamics 365, Xero, and QuickBooks keep
+          accounting data in sync and reduce manual reconciliation overhead
+      - name: API-driven Cost Allocation
+        description: >
+          Use custom fields and the REST API to tag expenses with cost centre, project,
+          or department codes and feed them into internal chargeback models

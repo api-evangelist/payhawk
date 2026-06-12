@@ -1,0 +1,81 @@
+aid: payhawk
+name: Payhawk
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/payhawk/refs/heads/main/apis.yml
+created: 2026-06-12
+modified: 2026-06-12
+specificationVersion: '0.19'
+description: >
+  Payhawk is a spend management platform that enables finance teams to issue corporate
+  cards, capture and manage expenses, process invoices, enforce budget controls, and
+  integrate with ERP and accounting systems. The platform serves businesses across
+  Europe, the US, and the UK in over 32 countries. Payhawk exposes a RESTful Developer
+  API at https://api.payhawk.io/api/v3 that allows custom integrations over expenses,
+  transactions, cards, employees, custom fields, fund accounts, and bank statements.
+  The API is authenticated via API key, supports real-time webhooks for event-driven
+  automation, and is rate-limited to 15 requests per second. The API is free to use
+  for all Payhawk account holders, with no separate developer tier required.
+tags:
+  - Spend Management
+  - Corporate Cards
+  - Expense Management
+  - Invoice Management
+  - Budget Controls
+  - ERP Integration
+  - Accounts Payable
+  - FinTech
+  - Finance Automation
+  - Webhooks
+apis:
+  - aid: payhawk:payhawk-api
+    name: Payhawk API
+    type: REST
+    description: >
+      RESTful API for programmatic access to Payhawk spend management features
+      including expenses, corporate cards, transactions, employees, custom fields,
+      fund accounts, bank statements, and webhook subscriptions.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developers.payhawk.com/
+    baseURL: https://api.payhawk.io/api/v3
+    tags:
+      - Expenses
+      - Corporate Cards
+      - Transactions
+      - Employees
+      - Webhooks
+      - Fund Accounts
+      - Bank Statements
+    properties:
+      - type: Documentation
+        url: https://developers.payhawk.com/
+      - type: Authentication
+        url: https://payhawk.com/help/overview-of-the-payhawk-developer-api
+common:
+  - type: Website
+    url: https://payhawk.com
+  - type: Documentation
+    url: https://developers.payhawk.com/
+  - type: HelpCenter
+    url: https://payhawk.com/help/payhawk-for-developers
+  - type: GitHubOrganization
+    url: https://github.com/payhawk
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/payhawk
+  - type: X
+    url: https://x.com/payhawk
+  - type: Blog
+    url: https://payhawk.com/blog
+  - type: Pricing
+    url: https://payhawk.com/pricing
+  - type: StatusPage
+    url: https://status.payhawk.com
+  - type: Plans
+    url: plans/payhawk-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/payhawk-rate-limits.yml
+  - type: FinOps
+    url: finops/payhawk-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
