@@ -2,5 +2,16 @@
   "url": "https://payhawk.com/blog",
   "rss": null,
   "note": "No RSS/Atom feed detected at standard paths; blog available at https://payhawk.com/blog",
-  "fetched": "2026-06-12"
+  "fetched": "2026-06-14T20:42:17Z",
+  "repo": "payhawk",
+  "feeds": [
+    {
+      "source": "https://x.com/payhawk",
+      "feed_url": "https://x.com/payhawk",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0
 }
