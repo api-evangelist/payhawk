@@ -1,7 +1,7 @@
 aid: payhawk
 name: Payhawk
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/payhawk/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
@@ -35,7 +35,7 @@ apis:
       RESTful API for programmatic access to Payhawk spend management features
       including expenses, corporate cards, transactions, employees, custom fields,
       fund accounts, bank statements, and webhook subscriptions.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.payhawk.com/
     baseURL: https://api.payhawk.io/api/v3
     tags:
