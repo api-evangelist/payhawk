@@ -52,6 +52,12 @@ apis:
       - type: Authentication
         url: https://payhawk.com/help/overview-of-the-payhawk-developer-api
 common:
+  - type: TrustCenter
+    url: security/payhawk-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/payhawk-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/payhawk-domain-security.yml
   - type: Website
     url: https://payhawk.com
   - type: Documentation
