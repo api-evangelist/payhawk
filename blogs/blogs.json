@@ -2,13 +2,14 @@
   "repo": "payhawk",
   "feeds": [
     {
-      "source": "https://payhawk.com/blog",
-      "feed_url": "",
-      "saved": 2,
-      "method": "agent-scrape"
+      "source": "https://x.com/payhawk",
+      "feed_url": "https://x.com/payhawk",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T13:00:44Z",
-  "post_count": 4,
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 6,
+  "agent_pulled": "2026-07-04"
 }
