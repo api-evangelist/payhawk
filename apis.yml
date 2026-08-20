@@ -36,6 +36,17 @@ tags:
   - Budget Controls
   - ERP Integration
   - Accounts Payable
+  - Fintech
+  - Finance Automation
+  - Webhook
+tags_raw:
+  - Spend Management
+  - Corporate Cards
+  - Expense Management
+  - Invoice Management
+  - Budget Controls
+  - ERP Integration
+  - Accounts Payable
   - FinTech
   - Finance Automation
   - Webhooks
@@ -51,6 +62,14 @@ apis:
     humanURL: https://developers.payhawk.com/
     baseURL: https://api.payhawk.io/api/v3
     tags:
+      - Expenses
+      - Corporate Cards
+      - Transaction
+      - Employees
+      - Webhook
+      - Fund Accounts
+      - Bank Statements
+    tags_raw:
       - Expenses
       - Corporate Cards
       - Transactions
