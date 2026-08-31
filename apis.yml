@@ -124,8 +124,6 @@ common:
     url: rate-limits/payhawk-rate-limits.yml
   - type: FinOps
     url: finops/payhawk-finops.yml
-  - type: Blog
-    url: blogs/blogs.json
   - type: JSONLDContext
     url: json-ld/payhawk-context.jsonld
 maintainers:
