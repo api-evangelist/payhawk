@@ -1,4 +1,4 @@
-# Payhawk (payhawk)
+# Payhawk
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,62 +64,122 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Payhawk is a spend management platform that enables finance teams to issue corporate cards, capture and manage expenses, process invoices, enforce budget controls, and integrate with ERP and accounting systems. The platform serves businesses across Europe, the US, and the UK in over 32 countries. Payhawk exposes a RESTful Developer API that allows custom integrations over expenses, transactions, cards, employees, custom fields, fund accounts, and bank statements. The API is authenticated via API key, supports real-time webhooks for event-driven automation, and is free for all account holders.
+Payhawk is a spend management platform that enables finance teams to issue corporate cards, capture and manage expenses, process invoices, enforce budget controls, and integrate with ERP and accounting systems. The platform serves businesses across Europe, the US, and the UK in over 32 countries. Payhawk exposes a RESTful Developer API at https://api.payhawk.io/api/v3 that allows custom integrations over expenses, transactions, cards, employees, custom fields, fund accounts, and bank statements. The API is authenticated via API key, supports real-time webhooks for event-driven automation, and is rate-limited to 15 requests per second. The API is free to use for all Payhawk account holders, with no separate developer tier required.
 
-**APIs.json:** https://raw.githubusercontent.com/api-evangelist/payhawk/refs/heads/main/apis.yml
+**Areas:** Spend Management · Corporate Cards · Expense Management · Invoice Management · Budget Controls · ERP Integration · Accounts Payable · Fintech · Finance Automation · Webhook
 
-**Naftiko:** https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=payhawk-api-evangelist&utm_content=repo
+## Payhawk on APIs.io
 
-## Tags
+Everything profiled for Payhawk is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/payhawk/](https://apis.io/providers/payhawk/)** — or go straight to one of the APIs or properties below.
 
-- Spend Management
-- Corporate Cards
-- Expense Management
-- Invoice Management
-- Budget Controls
-- ERP Integration
-- Accounts Payable
-- FinTech
-- Finance Automation
-- Webhooks
+### APIs (1)
 
-## APIs
+- [Payhawk API](https://apis.io/apis/payhawk/payhawk-api/) — RESTful API for programmatic access to Payhawk spend management features including expenses, corporate cards, transactions, employees, custom fields, fund…
 
-| Name | Type | Base URL | Documentation |
-|------|------|----------|---------------|
-| Payhawk API | REST | https://api.payhawk.io/api/v3 | https://developers.payhawk.com/ |
+### Published properties
 
-## Plans / Rate Limits / FinOps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Resource | File |
-|----------|------|
-| Plans & Pricing | [plans/payhawk-plans-pricing.yml](plans/payhawk-plans-pricing.yml) |
-| Rate Limits | [rate-limits/payhawk-rate-limits.yml](rate-limits/payhawk-rate-limits.yml) |
-| FinOps Profile | [finops/payhawk-finops.yml](finops/payhawk-finops.yml) |
+#### MCP servers (1)
 
-- **Plans:** Three tiers — Premium Cards, All-in-one Spend, Enterprise — all custom-quoted. Developer API is free for all account holders.
-- **Rate Limits:** 15 requests per second globally; 429 with Retry-After header on breach; pagination default 1,000 items per page.
-- **FinOps:** Subscription billing with no per-API-call charges; meters cover cards issued, active users, ERP integrations, and expense transactions.
+Model Context Protocol servers that expose the API to agents.
 
-## Timestamps
+- [payhawk](https://apis.io/servers/payhawk/payhawk/)
 
-- **Created:** 2026-06-12
-- **Modified:** 2026-06-12
+#### JSON-LD (1)
 
-## Common Properties
+Linked-data contexts for the provider's vocabulary.
 
-| Type | URL |
-|------|-----|
-| Website | https://payhawk.com |
-| Documentation | https://developers.payhawk.com/ |
-| Help Center | https://payhawk.com/help/payhawk-for-developers |
-| GitHub Organization | https://github.com/payhawk |
-| LinkedIn | https://www.linkedin.com/company/payhawk |
-| X / Twitter | https://x.com/payhawk |
-| Blog | https://payhawk.com/blog |
-| Pricing | https://payhawk.com/pricing |
-| Status Page | https://status.payhawk.com |
+- [Payhawk Context](https://apis.io/jsonld/payhawk/payhawk-context/)
 
-## Maintainers
+#### Security (3)
 
-**Kin Lane** — kin@apievangelist.com
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Payhawk Domain Security](https://apis.io/security/payhawk/payhawk-domain-security/)
+- [Payhawk Trust Center](https://apis.io/security/payhawk/payhawk-trust-center/)
+- [Payhawk Vulnerability Disclosure](https://apis.io/security/payhawk/payhawk-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Payhawk Plans Pricing](https://apis.io/plans/payhawk/payhawk-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Payhawk Rate Limits](https://apis.io/rate-limits/payhawk/payhawk-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Payhawk Finops](https://apis.io/finops/payhawk/payhawk-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://payhawk.com)
+- [Documentation](https://developers.payhawk.com/)
+- [Pricing](https://payhawk.com/pricing)
+- [Blog](https://payhawk.com/blog)
+- [GitHub](https://github.com/payhawk)
+- [Status](https://status.payhawk.com)
+
+## API Evangelist rating
+
+**Kin Score 24.7** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 68.3 |
+| Contract quality | 10.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 26.3 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 25.0** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/payhawk/](https://apis.io/providers/payhawk/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Payhawk: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/payhawk/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
